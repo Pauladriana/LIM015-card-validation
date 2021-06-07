@@ -8,8 +8,10 @@ const inputcvv = document.getElementById('cvv');
 const inputName = document.getElementById('holdername');
 const payButton = document.getElementById('submit')
 //const container = document.getElementById('bigcontainer');
-// const goodCard = document.getElementById('valid');
-// const badCard = document.getElementById('invalid');
+const goodCard = document.getElementById('valid');
+const badCard = document.getElementById('invalid');
+let isValid = '';
+const capa = document.getElementById('capa');
 
 //BLOQUEANDO LAS TECLAS ALFABETICAS
 
@@ -92,9 +94,11 @@ document.getElementById("cardnumber").addEventListener("change", function() {
            check.style.display = 'block';
            equis.style.display = 'none';
            crdIncomplete.style.display = 'none';
+           isValid = 'yes'
         } else {
             check.style.display = 'none';
             equis.style.display = 'block';
+            isValid = 'no'
 
         }
 
@@ -135,27 +139,32 @@ payButton.addEventListener("click", function() {
 
         if (inputNumber.value == '') {
             crdIncomplete.style.display = 'block'
-        } /*else {
-            crdIncomplete.style.display = 'none';
-        }*/
+        }
 
         if (inputName.value == '') {
             nameIncomplete.style.display = 'block'
-        } /*else {
-            nameIncomplete.style.display = 'none';
-        }*/
+        }
 
         if (inputDate.value == '') {
             dateIncomplete.style.display = 'block'
-        } /*else {
-            dateIncomplete.style.display = 'none';
-        }*/
+        }
 
         if (inputcvv.value == '') {
             cvvIncomplete.style.display = 'block'
-        } /*else {
-            cvvIncomplete.style.display = 'none';
-        }*/
+        }
+
+        //PAGAR 
+        
+
+        if (inputNumber.value != '' && isValid == 'yes' && inputName.value != '' && inputDate.value != '' && inputcvv.value != '' ) {
+            goodCard.style.display = 'block'
+            capa.style.display = 'block'
+        }
+
+        if (inputNumber.value != '' && isValid == 'no' && inputName.value != '' && inputDate.value != '' && inputcvv.value != '' ) {
+            badCard.style.display = 'block'
+            capa.style.display = 'block'
+        }
 });
 
 
@@ -177,3 +186,16 @@ inputcvv.addEventListener("change", function() {
         cvvIncomplete.style.display = 'none';
     }
 })
+
+// CUADROS DE RESPUESTA
+
+
+document.getElementById('close1').addEventListener('click', function() {
+    badCard.style.display = 'none';
+    capa.style.display = 'none'
+})
+document.getElementById('close2').addEventListener('click', function() {
+    goodCard.style.display = 'none';
+    capa.style.display = 'none'
+})
+
