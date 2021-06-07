@@ -4,11 +4,77 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Antic&family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
     <header></header>
-    <main></main>
-    <footer></footer>
+    <main>
+    <div id="bigcontainer">
+      <div id='checkoutblock'>
+        <img src="checkout.png" alt="checkout" id='img'>
+        <div id='total'>
+          <p>Total de compra</p>
+          <p>$29.99</p>
+        </div>
+      </div>
+
+      <div id='payment'>
+        <div id='card'>
+          <img src="credit-card.png" alt="chip" id='chip'>
+          <p id='numer'>4512 2589  2554  3697</p>
+          <p id='venc'>vencimiento</p>
+          <p id='fecha'>03/22</p>
+          <br>
+          <p id='titular'>Julia Torres Marcos</p>
+          <img src="visa.png" alt="visa" id='empresa'>
+
+        </div>
+
+        <div>
+        <label for='cardnumber'>Numero de Tarjeta</label><br>
+        <input type="text" id='cardnumber' name='cardnumber' placeholder='Ingrese Numero' minlength="16" maxlength="16" name='crd' value='' required>
+        <img src="check.png" alt="bien" id='bien' class='test'>
+        <img src="cross.png" alt="mal" id='mal' class='test'>
+          <p class='incomplete' id='crdincomplete'>Completa este campo</p>
+        <br>
+        <label for='holdername'>Nombre de Titular</label><br>
+        <input type="text" id='holdername' name='holdername' placeholder='Nombre Completo'  required>
+          <p class='incomplete' id='chdincomplete'>Completa este campo</p>
+        <br>
+        <label for="date">Vencimiento</label>
+        <input type="text" id='date' name='date' placeholder='dd/mm' minlength='5' maxlength='5' required>
+          <p class='incomplete' id='dtincomplete'>Completa este campo</p>
+        <label for="CVV">CVV</label>
+        <input type="text" name='cvv' id='cvv' minlength='3' maxlength='3' pattern="^[0-9]+" required> 
+          <p class='incomplete' id='cvvincomplete'>Completa este campo</p>
+        <br>
+
+        <button type='button' id='submit'>Pagar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id='invalid'>
+      <img src="bad.png" alt="notvalid" class='img'>
+        <div class='answer'>
+          <p>¡Malas Noticias!</p>
+          <p>Tu tarjeta no es válida, por favor ingresa otra</p>
+      </div>
+    </div>
+
+    <div id='valid'>
+      <img src="good.png" alt="isvalid" class='img'>
+        <div class='answer'>
+          <p>¡Felicitaciones!</p>
+          <p>Tu tarjeta ha sido aprobada y la compra se efectuó</p>
+        </div>
+    </div>
+
+    <div id='capa'>
+
+    </div>
+
+    </main>
     <script src="index.js" type="module"></script>
   </body>
 </html>
