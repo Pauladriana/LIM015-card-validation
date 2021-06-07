@@ -6,6 +6,7 @@ const inputNumber = document.getElementById('cardnumber');
 const inputDate = document.getElementById('date');
 const inputcvv = document.getElementById('cvv');
 const inputName = document.getElementById('holdername');
+const payButton = document.getElementById('submit')
 //const container = document.getElementById('bigcontainer');
 // const goodCard = document.getElementById('valid');
 // const badCard = document.getElementById('invalid');
@@ -90,6 +91,7 @@ document.getElementById("cardnumber").addEventListener("change", function() {
         if (totalnumber % 10 == 0) {
            check.style.display = 'block';
            equis.style.display = 'none';
+           crdIncomplete.style.display = 'none';
         } else {
             check.style.display = 'none';
             equis.style.display = 'block';
@@ -101,7 +103,7 @@ document.getElementById("cardnumber").addEventListener("change", function() {
     validez();
 
 
-    
+
     //OCULTAR CARACTERES
     function asteriscos() {
         let secret = inputNumber.value;
@@ -123,3 +125,55 @@ document.getElementById("cardnumber").addEventListener("change", function() {
 
 });
 
+// MENSAJES DE VACIOS
+const crdIncomplete = document.getElementById('crdincomplete');
+const nameIncomplete = document.getElementById('chdincomplete');
+const dateIncomplete = document.getElementById('dtincomplete');
+const cvvIncomplete = document.getElementById('cvvincomplete');
+
+payButton.addEventListener("click", function() {
+
+        if (inputNumber.value == '') {
+            crdIncomplete.style.display = 'block'
+        } /*else {
+            crdIncomplete.style.display = 'none';
+        }*/
+
+        if (inputName.value == '') {
+            nameIncomplete.style.display = 'block'
+        } /*else {
+            nameIncomplete.style.display = 'none';
+        }*/
+
+        if (inputDate.value == '') {
+            dateIncomplete.style.display = 'block'
+        } /*else {
+            dateIncomplete.style.display = 'none';
+        }*/
+
+        if (inputcvv.value == '') {
+            cvvIncomplete.style.display = 'block'
+        } /*else {
+            cvvIncomplete.style.display = 'none';
+        }*/
+});
+
+
+
+inputName.addEventListener("change", function() {
+    if (inputName.value != '') {
+        nameIncomplete.style.display = 'none';
+    }
+})
+
+inputDate.addEventListener("change", function() {
+    if (inputName.value != '') {
+        dateIncomplete.style.display = 'none';
+    }
+})
+
+inputcvv.addEventListener("change", function() {
+    if (inputName.value != '') {
+        cvvIncomplete.style.display = 'none';
+    }
+})
