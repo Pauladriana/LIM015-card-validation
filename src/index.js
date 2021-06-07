@@ -3,10 +3,40 @@ import validator from './validator.js';
 console.log(validator);
 
 const inputNumber = document.getElementById('cardnumber');
+const inputDate = document.getElementById('date');
+const inputcvv = document.getElementById('cvv');
+const inputName = document.getElementById('holdername');
+//const container = document.getElementById('bigcontainer');
+// const goodCard = document.getElementById('valid');
+// const badCard = document.getElementById('invalid');
 
 //BLOQUEANDO LAS TECLAS ALFABETICAS
 
 inputNumber.addEventListener("keypress", function(evt) {
+    var ch = String.fromCharCode(evt.which);
+
+    if(!(/[0-9]/.test(ch))) {
+        evt.preventDefault();
+    }
+});
+
+inputName.addEventListener("keypress", function(evt) {
+    var ch = String.fromCharCode(evt.which);
+
+    if(!(/[a-z A-Z]/.test(ch))) {
+        evt.preventDefault();
+    }
+});
+
+inputDate.addEventListener("keypress", function(evt) {
+    var ch = String.fromCharCode(evt.which);
+
+    if(!(/[0-9/]/.test(ch))) {
+        evt.preventDefault();
+    }
+});
+
+inputcvv.addEventListener("keypress", function(evt) {
     var ch = String.fromCharCode(evt.which);
 
     if(!(/[0-9]/.test(ch))) {
@@ -55,16 +85,15 @@ document.getElementById("cardnumber").addEventListener("change", function() {
     // Ahora validamos si es multimplo de diez
 
     function validez() {
-        //const container = document.getElementById('bigcontainer');
+        const check = document.getElementById('bien');
+        const equis = document.getElementById('mal')
         if (totalnumber % 10 == 0) {
-           // const goodCard = document.getElementById('valid');
-           // goodCard.style.display = 'block';
-           // container.style.display = 'none';
-        alert('Tarjeta Aceptada');
+           check.style.display = 'block';
+           equis.style.display = 'none';
         } else {
-           // const badCard = document.getElementById('invalid');
-           // badCard.style.display = 'block';
-        alert('Tarjeta No Valida');
+            check.style.display = 'none';
+            equis.style.display = 'block';
+
         }
 
     }
@@ -72,6 +101,7 @@ document.getElementById("cardnumber").addEventListener("change", function() {
     validez();
 
 
+    
     //OCULTAR CARACTERES
     function asteriscos() {
         let secret = inputNumber.value;
