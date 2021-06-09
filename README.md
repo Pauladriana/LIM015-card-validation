@@ -27,7 +27,7 @@ Se recreará e proceso de checkout y pago de una tienda virtual (e-commerce), co
 ## 3. Proyecto Final
 
 Imagen del proyecto:
-[proyecto](recursos\proyecto.JPG)
+<img src="\recursos\proyecto.JPG" alt="Mi proyecto"/>
 
 ## 4. Investigacion UX
 
@@ -38,7 +38,7 @@ Los usuarios son clientes que realizan compras en un e-commerce (branding por de
 Pensando en los clientes de un e-commerce, se prototipo una interfaz bastante grafica para que los usuarios supieran donde ingresar los datos, así mismo se penso en incluir mensajes de exito y error al procesar la compra e indicar si la tarjeta es valida o no mediante iconos
 
 Prototipo Inicial:
-[prototipo](recursos\prototipo.png)
+<img src="\recursos\prototipo.png" alt="Mi prototipo"/>
 
 ## 5. Objetivos de aprendizaje
 

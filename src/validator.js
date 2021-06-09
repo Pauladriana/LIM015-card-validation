@@ -1,6 +1,6 @@
 const validator = {
 
-  isValid(creditCardNumber) {
+isValid(creditCardNumber) {
         const check = document.getElementById('bien');
         const equis = document.getElementById('mal');
         const crdIncomplete = document.getElementById('crdincomplete');
@@ -12,8 +12,8 @@ const validator = {
             check.style.display = 'none';
             equis.style.display = 'block';
         }
-  },
-  maskify(creditCardNumber) {
+},
+maskify(creditCardNumber) {
     creditCardNumber = creditCardNumber.map((num,i) => {
             if (i < (creditCardNumber.length - 4)) {
                 return '*';
@@ -22,10 +22,10 @@ const validator = {
             }
         })
         let finalNumber = creditCardNumber.join('');
-        document.getElementById('cardnumber').value = finalNumber;
-  }
+        document.getElementById('cardnumber').value = finalNumber; //-----> asignamos el nuevo valor al input
+}
 
 
-  }
+}
 
 export default validator;

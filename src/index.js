@@ -1,6 +1,6 @@
 import validator from './validator.js';
 
-console.log(validator);
+//console.log(validator);
 
 const inputNumber = document.getElementById('cardnumber');
 const inputDate = document.getElementById('date');
@@ -64,19 +64,17 @@ document.getElementById("cardnumber").addEventListener("change", function() {
             return num
         }
     })
-    console.log(intoArray);
+    //console.log(intoArray);
     //Ahora sumamos los componentes del array
     const totalnumber = intoArray.reduce((accumulator, currentvalue) => {
         return accumulator + currentvalue;
     });
-    console.log(totalnumber);
+    //console.log(totalnumber);
 
-    //APLICAMOS VALIDATOR.JS
-
+//APLICAMOS VALIDATOR.JS
     validator.isValid(totalnumber);
 
-    let secret = inputNumber.value;
-    let secretNumber = secret.split('')
+    let secretNumber = cardNumber.split('') // ---> lo volvemos array para aplicar propiedad .map()
 
     validator.maskify(secretNumber);
 
@@ -122,7 +120,6 @@ inputNumber.addEventListener("change", function() {
 inputName.addEventListener("change", function() {
     if (inputName.value != '') {
         nameIncomplete.style.display = 'none';
-        console.log('funciona')
     }
 })
 inputDate.addEventListener("change", function() {
