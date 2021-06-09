@@ -7,7 +7,6 @@ const inputDate = document.getElementById('date');
 const inputcvv = document.getElementById('cvv');
 const inputName = document.getElementById('holdername');
 const payButton = document.getElementById('submit')
-//const container = document.getElementById('bigcontainer');
 const goodCard = document.getElementById('valid');
 const badCard = document.getElementById('invalid');
 let isValid = '';
@@ -55,7 +54,6 @@ document.getElementById("cardnumber").addEventListener("change", function() {
     //console.log(cardNumber);
     //console.log(typeof cardNumber);
     let intoArray = cardNumber.split('').reverse().map(Number);
-
     // multiplicamos las posiciones pares x2
     intoArray = intoArray.map((num, i) => {
         if (i % 2 == 1) {
@@ -64,9 +62,7 @@ document.getElementById("cardnumber").addEventListener("change", function() {
             return num;
         }
     });
-
     // sumamos los numeros mayores iguales a 10
-
     intoArray = intoArray.map((num) => {
         if (num >= 10) {
             return num -= 9;

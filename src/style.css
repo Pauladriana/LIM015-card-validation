@@ -168,7 +168,7 @@ p{
 
 #valid,
 #invalid{
-    background-color: rgb(114, 96, 143);
+    background-color: rgb(163, 184, 255);
     width: 550px;
     height: 550px;
     border: 1px solid rgb(114, 96, 143);
@@ -178,6 +178,11 @@ p{
     border-radius: 30px;
     box-shadow: 5px 5px 10px black;
     display: none;
+    z-index: 1;
+}
+
+#invalid .answer{
+    margin-top: 10px;
 }
 
 #close1,
@@ -202,7 +207,7 @@ p{
     font-size: 20px;
     font-family: 'Antic';
     font-weight: 600;
-    color:whitesmoke;
+    color: rgb(0, 0, 0);
 }
 
 #capa{
