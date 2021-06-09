@@ -13,6 +13,7 @@ const capa = document.getElementById('capa');
 const check = document.getElementById('bien');
 const equis = document.getElementById('mal');
 
+
 //BLOQUEANDO LAS TECLAS ALFABETICAS
 
 inputNumber.addEventListener("keypress", function(evt) {
@@ -45,38 +46,13 @@ inputcvv.addEventListener("keypress", function(evt) {
 
 document.getElementById("cardnumber").addEventListener("change", function() {
     let cardNumber = inputNumber.value;
-    //console.log(cardNumber);
-    //console.log(typeof cardNumber);
-    let intoArray = cardNumber.split('').reverse().map(Number);
-    // multiplicamos las posiciones pares x2
-    intoArray = intoArray.map((num, i) => {
-        if (i % 2 == 1) {
-            return num*2
-        } else {
-            return num;
-        }
-    });
-    // sumamos los numeros mayores iguales a 10
-    intoArray = intoArray.map((num) => {
-        if (num >= 10) {
-            return num -= 9;
-        } else {
-            return num
-        }
-    })
-    //console.log(intoArray);
-    //Ahora sumamos los componentes del array
-    const totalnumber = intoArray.reduce((accumulator, currentvalue) => {
-        return accumulator + currentvalue;
-    });
-    //console.log(totalnumber);
 
 //APLICAMOS VALIDATOR.JS
-    validator.isValid(totalnumber);
+    validator.isValid(cardNumber);
 
-    let secretNumber = cardNumber.split('') // ---> lo volvemos array para aplicar propiedad .map()
+     // ---> lo volvemos array para aplicar propiedad .map()
 
-    validator.maskify(secretNumber);
+    validator.maskify(cardNumber);
 
 });
 
