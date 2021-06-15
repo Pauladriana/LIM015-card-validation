@@ -16,11 +16,11 @@ describe('validator', () => {
     });
 
     it('debería retornar true para "79927398713"', () => {
-      expect( validator.isValid("79927398713")).toBe(true);
+      expect( validator.isValid(79927398713)).toBe(true);
     });
 
     it('debería retornar false para "1234567890"', () => {
-      expect( validator.isValid("1234567890")).toBe(false);
+      expect( validator.isValid(1234567890)).toBe(false);
     });
   });
 
@@ -30,11 +30,11 @@ describe('validator', () => {
     });
 
     it('Debería retornar "############5616" para "4556364607935616"', () => {
-      expect(validator.maskify("4556364607935616")).toBe("############5616");
+      expect(validator.maskify(4556364607935616)).toBe("############5616");
     });
 
     it('Debería retornar "1" para "1"', () => {
-      expect(validator.maskify("1")).toBe("1");
+      expect(validator.maskify(1)).toBe("1");
     });
 
     it('Debería retornar "######orld" para "helloworld"', () => {

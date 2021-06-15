@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Antic&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
 
     <main>
       <div id="borde">
         <div>
-          <img src="\src\recursos\carrito.png" alt="shopping-cart" id="cart">
+          <img src="\src\recursos\carrito.svg" alt="shopping-cart" id="cart">
           <button type="button" id="change">Proceder con pago</button>
         </div>
         <div id="bigcontainer">
           <div id="checkoutblock">
-            <img src="\src\recursos\left-arrow.png" alt="atras" id='back'>
+            <img src="\src\recursos\left-arrow.png" alt="atras" id="back">
             <div id="form">
               <label for="cardnumber">Numero de Tarjeta</label><br>
               <input type="text" class="input" id="cardnumber" placeholder="Ingrese Numero" minlength="16" maxlength="16" name="crd" value="" required>

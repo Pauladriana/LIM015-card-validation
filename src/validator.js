@@ -64,7 +64,8 @@ getIssuer(creditCardNumber) {
 },
 
 maskify(creditCardNumber) {
-    let secretNumber = creditCardNumber.split('')
+    let toString = creditCardNumber.toString()
+    let secretNumber = toString.split('')
     secretNumber = secretNumber.map((num,i) => {
             if (i < (secretNumber.length - 4)) {
                 return '#';
