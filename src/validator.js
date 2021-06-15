@@ -1,7 +1,8 @@
 const validator = {
 
 isValid(creditCardNumber) {
-        let intoArray = creditCardNumber.split('').reverse().map(Number);
+        let toString = creditCardNumber.toString()
+        let intoArray = toString.split('').reverse().map(Number);
         intoArray = intoArray.map((num, i) => {
             if (i % 2 == 1) {
                 return num*2
@@ -26,6 +27,42 @@ isValid(creditCardNumber) {
         }
 },
 
+getIssuer(creditCardNumber) {
+    let toString = creditCardNumber.toString();
+    let twoNumbers = toString.slice(0,2);
+    let threeNumbers = toString.slice(0,3);
+    let fourNumbers = toString.slice(0,4);
+
+    if (toString[0] == 3) {
+        if (twoNumbers == 36 || twoNumbers == 38) {
+            return "Diners Club"
+        } else if (twoNumbers == 34 || twoNumbers == 37) {
+            return "American Express"
+        } else if (threeNumbers == 300 || threeNumbers == 301 || threeNumbers == 302 || threeNumbers == 303 || threeNumbers == 304 || threeNumbers == 305) {
+            return "Diners Club"
+        } else {
+            return "JCB";
+        }
+    }
+    if (toString[0] == 4) {
+        return "Visa"
+    }
+
+    if (twoNumbers == 51 || twoNumbers == 52 || twoNumbers == 53 || twoNumbers == 54 || twoNumbers == 55) {
+        return "MasterCard"
+    }
+
+    if (fourNumbers == 1800 || fourNumbers == 2131) {
+        return "JCB"
+    }
+    if (fourNumbers == 2014 || fourNumbers == 2149) {
+        return "Diners Club"
+    }
+    if (fourNumbers == 6011) {
+        return "Discover"
+    }
+},
+
 maskify(creditCardNumber) {
     let secretNumber = creditCardNumber.split('')
     secretNumber = secretNumber.map((num,i) => {
@@ -34,12 +71,10 @@ maskify(creditCardNumber) {
             } else {
                 return num
             }
-        }) 
+        })
         let finalNumber = secretNumber.join('');
         return finalNumber;
-        
-}
-
+},
 
 }
 

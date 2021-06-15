@@ -7,68 +7,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Antic&family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header></header>
+
     <main>
-    <div id="bigcontainer">
-      <div id="checkoutblock">
-        <img src="\recursos\checkout.png" alt="checkout" id="img">
-        <div id="total">
-          <p>Total de compra</p>
-          <p>$29.99</p>
-        </div>
-      </div>
-
-      <div id="payment">
-        <div id="card">
-          <img src="\recursos\credit-card.png" alt="chip" id="chip">
-          <p id="numer">4512 2589  2554  3697</p>
-          <p id="venc">vencimiento</p>
-          <p id="fecha">03/22</p>
-          <br>
-          <p id="titular">Julia Torres Marcos</p>
-          <img src="\recursos\visa.png" alt="visa" id="empresa">
-
-        </div>
-
+      <div id="borde">
         <div>
-        <label for="cardnumber">Numero de Tarjeta</label><br>
-        <input type="text" class="input" id="cardnumber" placeholder="Ingrese Numero" minlength="16" maxlength="16" name="crd" value="" required>
-        <img src="\recursos\check.png" alt="bien" id="bien" class="test">
-        <img src="\recursos\cross.png" alt="mal" id="mal" class="test">
-          <p class="incomplete" id="crdincomplete">Completa este campo</p>
-        <br>
-        <label for="holdername">Nombre de Titular</label><br>
-        <input type="text" class="input" id="holdername" name="holdername" placeholder="Nombre Completo" maxlength="30" required>
-          <p class="incomplete" id="chdincomplete">Completa este campo</p>
-        <br>
-        <label for="date">Vencimiento</label>
-        <input type="text" clss="input" id="date" name="date" placeholder="dd/mm" minlength="5" maxlength="5" required>
-          <p class="incomplete" id="dtincomplete">Completa este campo</p>
-        <label for="CVV">CVV</label>
-        <input type="text" class="input" name="cvv" id="cvv" minlength="3" maxlength="3" pattern="^[0-9]+" required> 
-          <p class="incomplete" id="cvvincomplete">Completa este campo</p>
-        <br>
+          <img src="\src\recursos\carrito.png" alt="shopping-cart" id="cart">
+          <button type="button" id="change">Proceder con pago</button>
+        </div>
+        <div id="bigcontainer">
+          <div id="checkoutblock">
+            <img src="\src\recursos\left-arrow.png" alt="atras" id='back'>
+            <div id="form">
+              <label for="cardnumber">Numero de Tarjeta</label><br>
+              <input type="text" class="input" id="cardnumber" placeholder="Ingrese Numero" minlength="16" maxlength="16" name="crd" value="" required>
+              <img src="\src\recursos\check.png" alt="bien" id="bien" class="test">
+              <img src="\src\recursos\cross.png" alt="mal" id="mal" class="test">
+                <p class="incomplete" id="crdincomplete">Completa este campo</p>
+              <br>
+              <label for="holdername">Nombre de Titular</label><br>
+              <input type="text" class="input" id="holdername" name="holdername" placeholder="Nombre Completo" maxlength="30" required>
+                <p class="incomplete" id="chdincomplete">Completa este campo</p>
+              <br>
+              <label for="date">Vencimiento</label>
+              <input type="text" clss="input" id="date" name="date" placeholder="dd/mm" minlength="5" maxlength="5" required>
+                <p class="incomplete" id="dtincomplete">Completa este campo</p>
+              <label for="CVV">CVV</label>
+              <input type="text" class="input" name="cvv" id="cvv" minlength="3" maxlength="3" pattern="^[0-9]+" required> 
+                <p class="incomplete" id="cvvincomplete">Completa este campo</p>
+              </div>
+          </div>
 
-        <button type="button" id="submit">Pagar</button>
+          <div id="payment">
+            <div id="card">
+              <img src="\src\recursos\credit-card.png" alt="chip" id="chip">
+              <p id="numer">4512 2589  2554  3697</p>
+              <p id="venc">vencimiento</p>
+              <p id="fecha">03/22</p>
+              <br>
+              <p id="titular">Julia Torres Marcos</p>
+              <img src="\src\recursos\visa.png" alt="visa" id="visa" class="empresa">
+              <img src="\src\recursos\jcb.png" alt="jcb" id="jcb" class="empresa">
+              <img src="\src\recursos\dinersclub.png" alt="diners" id="diners" class="empresa">
+              <img src="\src\recursos\americanexpress.png" alt="american" id="american" class="empresa">
+              <img src="\src\recursos\mastercard.png" alt="mastercard" id="mastercard" class="empresa">
+              <img src="\src\recursos\discover.png" alt="discover" id="discover" class="empresa">
+
+            </div>
+
+
+          </div>
+
+          <div class="pay">
+          <button type="button" id="submit">Pagar</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="invalid">
-      <img src="\src\recursos\delete.png" alt="close" id="close1">
-      <img src="\recursos\bad.png" alt="notvalid" class="img">
-        <div class="answer">
-          <p>¡Malas Noticias!</p>
-          <p>Tu tarjeta no es válida, por favor ingresa otra</p>
-      </div>
-    </div>
 
     <div id="valid">
-      <img src="\recursos\delete.png" alt="close" id="close2">
-      <img src="\recursos\good.png" alt="isvalid" class="img">
+      <img src="\src\recursos\delete.png" alt="close" id="close2">
         <div class="answer">
+          <img src="\src\recursos\thankyou.png" alt="thankyou" id="thanks">
           <p>¡Felicitaciones!</p>
-          <p>Tu tarjeta ha sido aprobada y la compra se efectuó</p>
+          <p>La compra ha sido efectuada</p>
         </div>
     </div>
 

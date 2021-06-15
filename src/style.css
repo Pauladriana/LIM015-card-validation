@@ -1,32 +1,45 @@
 
 body{
-    background-image: linear-gradient(to bottom, rgb(193, 225, 255), rgb(179, 168, 194));
+    background-image: linear-gradient(to bottom, rgb(245, 245, 245), rgb(160, 160, 160));
     height: 125vh;
     font-family: 'Roboto';
 }
 
-#bigcontainer{
-    display: flex;
-    background-color: white;
+#borde {
+    background-color: none;
+    border: solid 2px white;
     width: fit-content;
+    height: fit-content;
+    z-index: -1;
     margin: auto;
     margin-top: 9vh;
-    padding: 0px;
-    box-shadow: 10px 10px 20px gray;
+    padding: 10px;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 20px;
+}
+
+#bigcontainer{
+    display: grid;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 #checkoutblock{
-    background-color: whitesmoke;
-    width: 450px;
-    height: 500px;
-    padding: 20px;
+    background-color: white;
+    height: 420px;
+    width: 400px;
+    padding: 10px;
     border-radius: 0px 50px 50px 0px;
 }
 
-#img{
-    width: 450px;
-    height: 400px;
+#form {
+    margin-top: 100px;
 }
+
 
 #total{
     font-family: 'Antic';
@@ -41,8 +54,8 @@ body{
     width: 300px;
     height: 180px;
     margin: auto;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-top: 120px;
     border-radius: 25px;
     box-shadow: 2px 2px 10px salmon;
     color: white;
@@ -55,27 +68,34 @@ body{
 
 #payment{
     background-color: white;
-    width: 450px;
-    height: 500px;
+    height: 420;
+    width: 400px;
     padding: 10px;
+}
+
+.pay {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 50px;
 }
 
 .test{
     height: 15px;
     position: absolute;
-    bottom: 255px;
-    right: 250px;
+    bottom: 370px;
+    left: 585px;
     display: none;
 }
 
 #submit{
-    background-color: rgb(255, 158, 255);
+    display: block;
+    margin: auto;
+    background-color: salmon;
+    color: white;
     width: 100px;
     padding: 7px;
-    margin: 175px;
-    margin-top: 15px;
-    border-radius: 7px;
-    border-color: rgb(255, 158, 255);
+    border-radius: 10px;
+    border-color: salmon;
     font-family: 'Roboto';
     font-size: 16px;
     font-weight: bold;
@@ -85,30 +105,30 @@ body{
 }
 
 #submit:active{
-    background-color: salmon;
-    border-color: salmon;
+    background-color: rgb(228, 150, 142);
+    border-color: rgb(228, 150, 142);
 
 }
 input{
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     border: none;
-    border-bottom: rgb(255, 219, 252) 2px solid;
+    border-bottom: rgb(255, 211, 190) 2px solid;
     height: 30px;
 }
 
 label{
-    margin-left: 40px;
+    margin-left: 20px;
     font-weight: 600;
 }
 
 #cardnumber,
 #holdername{
-    width: 370px;
-    margin-left: 40px;
+    width: 320px;
+    margin-left: 20px;
 }
 
 #cvv{
-    width: 98px;
+    width: 68px;
 }
 
 #date{
@@ -129,16 +149,19 @@ p{
     margin-bottom: 15px;
 }
 
-#empresa{
+.empresa{
     width: 60px;
     height:60px;
-    display: block;
+    display: none;
     position: relative;
     left: 80%;
     bottom: 26.5%;
     right: 12%
 }
 
+#mastercard {
+    width: 80px;
+}
 
 #numer{
     width: 300px;
@@ -168,9 +191,9 @@ p{
 
 #valid,
 #invalid{
-    background-color: rgb(163, 184, 255);
+    background-color: whitesmoke;
     width: 550px;
-    height: 550px;
+    height: 500px;
     border: 1px solid rgb(114, 96, 143);
     position: absolute;
     left: 30%;
@@ -223,7 +246,7 @@ p{
 
 p.incomplete{
     position: absolute;
-    width: 200px;
+    width: 150px;
     height: 20px;
     background-color: #fff;
     padding: 5px;
@@ -247,24 +270,71 @@ p.incomplete::before{
 }
 
 #crdincomplete{
-    right: 235px;
-    bottom: 199px;
+    bottom: 310px;
+    left: 440px;
     display: none;
 }
 #chdincomplete{
-    right: 235px;
-    bottom: 125px;
+    bottom: 230px;
+    left: 440px;
     display: none;
 }
 
 #dtincomplete{
-    right: 340px;
-    bottom: 73px;
+    bottom: 168px;
+    left: 270px;
     display: none;
 }
 
 #cvvincomplete{
-    right: 108px;
-    bottom: 71px;
+    left: 440px;
+    bottom: 168px;
     display: none;
+}
+
+#cvvincomplete::before,
+#dtincomplete::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 120px;
+    border: .75rem solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+#back {
+    width: 20px;
+}
+
+#cart{
+    width: 850px;
+    height: 510px;
+    border-radius: 20px;
+    display: none;
+}
+
+#change{
+    position: absolute;
+    width: 246px;
+    height: 25px;
+    border-radius: 10px;
+    bottom: 115px;
+    left: 790px;
+    background-color: salmon;
+    color: white;
+    border-color: salmon;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: bold;
+    border-style: solid;
+    box-shadow: 1px 1px 2px rgb(209, 209, 209);
+    display: none;
+}
+
+#thanks {
+    width: 300px;
 }
