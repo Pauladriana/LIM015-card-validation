@@ -84,7 +84,7 @@ body{
 .test{
     height: 15px;
     position: absolute;
-    bottom: 370px;
+    bottom: 365px;
     left: 585px;
     display: none;
 }
@@ -277,6 +277,11 @@ p.incomplete::before{
     left: 440px;
     display: none;
 }
+
+#crdwrong{
+    width: 130px;
+}
+
 #chdincomplete{
     bottom: 220px;
     left: 440px;
