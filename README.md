@@ -27,18 +27,20 @@ Se recreará e proceso de checkout y pago de una tienda virtual (e-commerce), co
 ## 3. Proyecto Final
 
 Imagen del proyecto:
-<img src="\recursos\proyecto.JPG" alt="Mi proyecto"/>
+![carrito](https://user-images.githubusercontent.com/85115054/122286228-3f387880-ceb5-11eb-854a-1f43615d9517.png)
+![Cardvalidation](https://user-images.githubusercontent.com/85115054/122286987-14025900-ceb6-11eb-8199-8d115f273556.PNG)
+
 
 ## 4. Investigacion UX
 
 Usuarios y Relación con el producto:
 
-Los usuarios son clientes que realizan compras en un e-commerce (branding por definir). Se implemento el proceso de pago dentro de la web de la marca, para que los usuarios puedan realizar las compras directamente desde el portal web y por un canal unico, facilitando el proceso para la empresa y consumidores.
+Los usuarios son clientes que realizan compras en un e-commerce de venta de accesorios. Se implemento el proceso de pago dentro de la web de la marca, para que los usuarios puedan realizar las compras directamente desde el portal web y por un canal unico, facilitando el proceso para la empresa y consumidores.
 
 Pensando en los clientes de un e-commerce, se prototipo una interfaz bastante grafica para que los usuarios supieran donde ingresar los datos, así mismo se penso en incluir mensajes de exito y error al procesar la compra e indicar si la tarjeta es valida o no mediante iconos
 
 Prototipo Inicial:
-<img src="\recursos\prototipo.png" alt="Mi prototipo"/>
+![PROTOTIPO](https://user-images.githubusercontent.com/85115054/122286142-29c34e80-ceb5-11eb-8d26-cd5ba0764828.png)
 
 ## 5. Objetivos de aprendizaje
 
@@ -52,7 +54,7 @@ Prototipo Inicial:
 
 * [X] Uso de selectores del DOM.
 * [X] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+* [X] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
 (appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
 
 ### JavaScript
@@ -64,11 +66,11 @@ Prototipo Inicial:
 
 ### Testing
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* [X] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
 
 ### Estructura del código y guía de estilo
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
+* [X] Organizar y dividir el código en módulos (Modularización)
 * [X] Uso de identificadores descriptivos (Nomenclatura | Semántica)
 * [X] Uso de linter (ESLINT)
 
