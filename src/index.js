@@ -63,48 +63,51 @@ document.getElementById("cardnumber").addEventListener("change", function() {
 
     //FRANQUICIA DE TARJETA
     validator.getIssuer(cardNumber);
-    if (validator.getIssuer(cardNumber) == "JCB"){
-        document.getElementById("jcb").style.display = "block";
-        document.getElementById("diners").style.display = "none";
-        document.getElementById("american").style.display = "none";
-        document.getElementById("visa").style.display = "none";
-        document.getElementById("mastercard").style.display = "none";
-        document.getElementById("discover").style.display = "none"
-    } else if (validator.getIssuer(cardNumber) == "Diners Club"){
-        document.getElementById("diners").style.display = "block";
-        document.getElementById("jcb").style.display = "none";
-        document.getElementById("american").style.display = "none";
-        document.getElementById("visa").style.display = "none";
-        document.getElementById("mastercard").style.display = "none";
-        document.getElementById("discover").style.display = "none"
-    } else if (validator.getIssuer(cardNumber) == "American Express") {
-        document.getElementById("american").style.display = "block";
-        document.getElementById("jcb").style.display = "none";
-        document.getElementById("visa").style.display = "none";
-        document.getElementById("mastercard").style.display = "none";
-        document.getElementById("discover").style.display = "none";
-        document.getElementById("diners").style.display = "none"
-    } else if (validator.getIssuer(cardNumber) == "Visa") {
-        document.getElementById("visa").style.display = "block";
-        document.getElementById("american").style.display = "none";
-        document.getElementById("jcb").style.display = "none";
-        document.getElementById("mastercard").style.display = "none";
-        document.getElementById("discover").style.display = "none";
-        document.getElementById("diners").style.display = "none"
-    } else if (validator.getIssuer(cardNumber) == "MasterCard") {
-        document.getElementById("mastercard").style.display = "block";
-        document.getElementById("visa").style.display = "none";
-        document.getElementById("american").style.display = "none";
-        document.getElementById("jcb").style.display = "none";
-        document.getElementById("discover").style.display = "none";
-        document.getElementById("diners").style.display = "none"
-    } else if (validator.getIssuer(cardNumber) == "Discover") {
-        document.getElementById("discover").style.display = "block";
-        document.getElementById("mastercard").style.display = "none";
-        document.getElementById("visa").style.display = "none";
-        document.getElementById("american").style.display = "none";
-        document.getElementById("jcb").style.display = "none";
-        document.getElementById("diners").style.display = "none"
+
+    if(validator.isValid(cardNumber) == true){
+        if (validator.getIssuer(cardNumber) == "JCB"){
+            document.getElementById("jcb").style.display = "block";
+            document.getElementById("diners").style.display = "none";
+            document.getElementById("american").style.display = "none";
+            document.getElementById("visa").style.display = "none";
+            document.getElementById("mastercard").style.display = "none";
+            document.getElementById("discover").style.display = "none"
+        } else if (validator.getIssuer(cardNumber) == "Diners Club"){
+            document.getElementById("diners").style.display = "block";
+            document.getElementById("jcb").style.display = "none";
+            document.getElementById("american").style.display = "none";
+            document.getElementById("visa").style.display = "none";
+            document.getElementById("mastercard").style.display = "none";
+            document.getElementById("discover").style.display = "none"
+        } else if (validator.getIssuer(cardNumber) == "American Express") {
+            document.getElementById("american").style.display = "block";
+            document.getElementById("jcb").style.display = "none";
+            document.getElementById("visa").style.display = "none";
+            document.getElementById("mastercard").style.display = "none";
+            document.getElementById("discover").style.display = "none";
+            document.getElementById("diners").style.display = "none"
+        } else if (validator.getIssuer(cardNumber) == "Visa") {
+            document.getElementById("visa").style.display = "block";
+            document.getElementById("american").style.display = "none";
+            document.getElementById("jcb").style.display = "none";
+            document.getElementById("mastercard").style.display = "none";
+            document.getElementById("discover").style.display = "none";
+            document.getElementById("diners").style.display = "none"
+        } else if (validator.getIssuer(cardNumber) == "Mastercard") {
+            document.getElementById("mastercard").style.display = "block";
+            document.getElementById("visa").style.display = "none";
+            document.getElementById("american").style.display = "none";
+            document.getElementById("jcb").style.display = "none";
+            document.getElementById("discover").style.display = "none";
+            document.getElementById("diners").style.display = "none"
+        } else if (validator.getIssuer(cardNumber) == "Discover") {
+            document.getElementById("discover").style.display = "block";
+            document.getElementById("mastercard").style.display = "none";
+            document.getElementById("visa").style.display = "none";
+            document.getElementById("american").style.display = "none";
+            document.getElementById("jcb").style.display = "none";
+            document.getElementById("diners").style.display = "none"
+        }
     } else {
         document.getElementById("discover").style.display = "none";
         document.getElementById("mastercard").style.display = "none";
@@ -143,8 +146,10 @@ payButton.addEventListener("click", function() {
 
         //PAGAR
         if (inputNumber.value != '' && check.style.display == 'block' && inputName.value != '' && inputDate.value != '' && inputcvv.value != '' ) {
-            goodCard.style.display = 'block'
-            capa.style.display = 'block'
+            goodCard.style.display = 'block';
+            capa.style.display = 'block';
+        } else if (inputNumber.value != '' && equis.style.display == 'block' && inputName.value != '' && inputDate.value != '' && inputcvv.value != '' ) {
+            document.getElementById("crdwrong").style.display = "block"
         }
 });
 
@@ -152,6 +157,7 @@ payButton.addEventListener("click", function() {
 inputNumber.addEventListener("change", function() {
     if (inputNumber.value != '') {
         crdIncomplete.style.display = 'none';
+        document.getElementById("crdwrong").style.display = "none";
         document.getElementById("numer").innerHTML = inputNumber.value;
     }
 })

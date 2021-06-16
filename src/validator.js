@@ -49,7 +49,7 @@ getIssuer(creditCardNumber) {
     }
 
     if (twoNumbers == 51 || twoNumbers == 52 || twoNumbers == 53 || twoNumbers == 54 || twoNumbers == 55) {
-        return "MasterCard"
+        return "Mastercard"
     }
 
     if (fourNumbers == 1800 || fourNumbers == 2131) {
