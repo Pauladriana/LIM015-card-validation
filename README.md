@@ -1,5 +1,7 @@
 # PROCESO DE PAGO EN E-COMMERCE
 
+**Puedes desplegar el proyecto en el siguiente link:** [Proyecto](https://pauladriana.github.io/LIM015-card-validation/src/)
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
