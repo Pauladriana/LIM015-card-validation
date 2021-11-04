@@ -12,7 +12,7 @@ const capa = document.getElementById('capa');
 const check = document.getElementById('bien');
 const equis = document.getElementById('mal');
 const payment = document.getElementById("bigcontainer");
-const cart = document.getElementById("cart");
+const cart = document.getElementById("shoppingCartCtn");
 const checkout = document.getElementById("change");
 
 
@@ -188,7 +188,7 @@ document.getElementById('close2').addEventListener('click', function() {
 
 document.getElementById('back').addEventListener('click', function() {
     payment.style.display = 'none';
-    cart.style.display = 'block';
+    cart.style.display = 'flex';
     checkout.style.display = 'block';
 })
 

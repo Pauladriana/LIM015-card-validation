@@ -11,9 +11,83 @@
 
     <main>
       <div id="borde">
-        <div>
-          <img src=".\recursos\carrito.svg" alt="shopping-cart" id="cart">
-          <button type="button" id="change">Proceder con pago</button>
+        <div id="shoppingCartCtn">
+          <div id="selectedProducts">
+            <h2>Carrito de compras</h2>
+            <div class="producItem">
+              <img src="./recursos/glasses1.PNG" alt="glassPhoto">
+              <div class="productDescr">
+                <p class="productTitle">Gafas de sol con montura acrilica</p>
+                <p>Beige</p>
+              </div>
+              <div class="selectedQty">
+                <p>-</p>
+                <p>2</p>
+                <p>+</p>
+              </div>
+              <p class="productPrice">S/25</p>
+              <p class="removeProduct">X</p>
+            </div>
+            <div class="producItem white">
+              <img src="./recursos/glasses3.PNG" alt="glassPhoto">
+              <div class="productDescr">
+                <p class="productTitle">Gafas de sol</p>
+                <p>Naranja</p>
+              </div>
+              <div class="selectedQty">
+                <p>-</p>
+                <p>2</p>
+                <p>+</p>
+              </div>
+              <p class="productPrice">S/25</p>
+              <p class="removeProduct">X</p>
+            </div>
+            <div class="producItem">
+              <img src="./recursos/glasses2.PNG" alt="glassPhoto">
+              <div class="productDescr">
+                <p class="productTitle">Gafas de sol con montura rectangulo</p>
+                <p>Verde</p>
+              </div>
+              <div class="selectedQty">
+                <p>-</p>
+                <p>2</p>
+                <p>+</p>
+              </div>
+              <p class="productPrice">S/25</p>
+              <P class="removeProduct">X</P>
+            </div> 
+          </div>
+          <div id="checkoutList">
+            <h2>Resumen</h2>
+            <div class="subtotal">
+              <div class="checkoutLine">
+                <p class="checkout1">Productos</p>
+                <p class="checkout2">S/ 72</p>
+              </div>
+              <div class="checkoutLine">
+                <p class="checkout1">Dscto</p>
+                <p class="checkout2">S/ 10</p>
+              </div>
+              <hr>
+              <div class="checkoutLine">
+                <p class="checkout1"><strong>Subtotal de compra</strong></p>
+                <p class="checkout2"><strong>S/ 62</strong></p>
+              </div>
+              
+            </div>
+            <div>
+              <div class="checkoutLine">
+                <p class="checkout1">Envio</p>
+                <p class="checkout2">S/ 12</p>
+              </div>
+              <hr>
+              <div class="checkoutLine">
+                <p class="checkout1"><strong>Total compra</strong></p>
+                <p class="checkout2"><strong>S/ 74</strong></p>
+              </div>
+            </div>
+            <button type="button" id="change">Proceder con pago</button>
+          </div> 
         </div>
         <div id="bigcontainer">
           <div id="checkoutblock">
@@ -64,7 +138,6 @@
           </div>
         </div>
       </div>
-
 
     <div id="valid">
       <img src=".\recursos\delete.png" alt="close" id="close2">

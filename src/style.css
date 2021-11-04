@@ -19,7 +19,7 @@ body{
 }
 
 #bigcontainer{
-    display: grid;
+    display: none;
     background-color: white;
     width: fit-content;
     height: fit-content;
@@ -326,12 +326,10 @@ p.incomplete::before{
 }
 
 #change{
-    position: absolute;
     width: 246px;
     height: 25px;
     border-radius: 10px;
     bottom: 115px;
-    left: 790px;
     background-color: salmon;
     color: white;
     border-color: salmon;
@@ -339,7 +337,9 @@ p.incomplete::before{
     font-size: 16px;
     border-style: solid;
     box-shadow: 1px 1px 2px rgb(209, 209, 209);
-    display: none;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
 }
 
 #change:active{
@@ -349,4 +349,102 @@ p.incomplete::before{
 
 #thanks {
     width: 300px;
+}
+
+#shoppingCartCtn{
+    display:flex;
+    flex-direction: row;
+    width: 820px;
+    height: 490px;
+    background-color: white;
+    font-family: "Sulphur Point";
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+#selectedProducts{
+    flex: 55;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+#checkoutList{
+    flex: 45;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 20px;
+    height: 440px;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+#checkoutList h2{
+    text-align: center;
+
+}
+
+#checkoutList hr{
+    border: 1px solid rgba(250, 128, 114, 0.356);
+
+}
+
+.producItem{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(240, 240, 240);
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.producItem img{
+    width: 80px;
+}
+.productDescr{
+    width: 180px;
+}
+.productTitle{
+    font-weight: bold;
+}
+
+.white{
+    background-color: white;
+}
+.selectedQty{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    height: fit-content;
+    border-radius: 20px;
+    font-weight: bold;
+
+}
+
+.removeProduct{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    padding: 1px 3px;
+    font-weight: bold;
+    font-size: 6px;
+}
+
+.productPrice{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.checkoutLine{
+    display: flex;
+    flex-direction: row;
+}
+
+.checkout1{
+    flex: 80;
+}
+.checkout2{
+    flex:20;
+}
+
+.subtotal{
+    margin-bottom: 50px;
 }
